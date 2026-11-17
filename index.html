@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073F69">
+  <meta name="description" content="Smart Cool provides aircon servicing, chemical cleaning, repairs and installation in Singapore. Explore service options and book an appointment.">
+  <title>Smart Cool Singapore | Aircon Servicing, Repair & Installation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #0878C9;
+      --navy: #073F69;
+      --teal: #28B8C5;
+      --ice: #E8F5FB;
+      --charcoal: #1B2B38;
+      --muted: #617483;
+      --cloud: #F5F8FA;
+      --white: #FFFFFF;
+      --line: #DCE7ED;
+      --shadow: 0 18px 48px rgba(7, 63, 105, .10);
+      --radius: 18px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0;
+      color: var(--charcoal);
+      background: var(--white);
+      font-family: "Inter", sans-serif;
+      line-height: 1.65;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--blue);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      width: 22px;
+      height: 2px;
+      background: var(--teal);
+      content: "";
+    }
+    h1, h2, h3, h4 {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      line-height: 1.15;
+      letter-spacing: -.035em;
+    }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.35rem); }
+    h2 { font-size: clamp(2rem, 3.5vw, 3rem); }
+    h3 { font-size: 1.25rem; }
+    p { margin: 0; color: var(--muted); }
+    .section { padding: 92px 0; }
+    .section-heading { max-width: 690px; margin-bottom: 38px; }
+    .section-heading h2 { margin: 13px 0 14px; }
+    .section-heading p { max-width: 620px; }
+    .btn {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 21px;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      font-size: .92rem;
+      font-weight: 700;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      color: var(--white);
+      background: var(--blue);
+      box-shadow: 0 9px 22px rgba(8, 120, 201, .22);
+    }
+    .btn-primary:hover { background: var(--navy); }
+    .btn-outline {
+      color: var(--navy);
+      background: var(--white);
+      border-color: #BFD4E0;
+    }
+    .btn-outline:hover { border-color: var(--blue); background: var(--ice); }
+    .btn-light { color: var(--navy); background: var(--white); }
+    .btn-light:hover { background: var(--ice); }
+    .icon {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 auto;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Header */
+    .topbar {
+      color: #DCEEF8;
+      background: var(--navy);
+      font-size: .8rem;
+    }
+    .topbar-inner {
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .topbar a { color: var(--white); font-weight: 700; }
+    .topbar-contact { display: flex; flex-wrap: wrap; gap: 20px; }
+    .site-header {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid rgba(220,231,237,.85);
+      backdrop-filter: blur(14px);
+    }
+    .nav-wrap {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -.05em;
+    }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background: linear-gradient(145deg, var(--blue), var(--teal));
+      border-radius: 12px;
+    }
+    .brand-mark svg { width: 26px; height: 26px; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      color: #405666;
+      font-size: .88rem;
+      font-weight: 700;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      color: var(--navy);
+      background: var(--ice);
+      border: 0;
+      border-radius: 9px;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 74px 0 82px;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(40,184,197,.12), transparent 28%),
+        linear-gradient(115deg, #F5FAFD 0%, #E8F5FB 56%, #F7FBFD 100%);
+    }
+    .hero::after {
+      position: absolute;
+      right: -140px;
+      bottom: -250px;
+      width: 540px;
+      height: 540px;
+      border: 1px solid rgba(8,120,201,.12);
+      border-radius: 50%;
+      content: "";
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      align-items: center;
+      gap: 54px;
+    }
+    .hero-copy { max-width: 610px; }
+    .hero-copy h1 { margin: 17px 0 20px; color: var(--navy); }
+    .hero-copy h1 span { color: var(--blue); }
+    .hero-copy > p { max-width: 540px; font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 29px; }
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 25px;
+      color: #526C7C;
+      font-size: .85rem;
+      font-weight: 600;
+    }
+    .hero-note svg { color: var(--teal); }
+    .hero-visual {
+      position: relative;
+      min-height: 455px;
+    }
+    .hero-photo {
+      position: absolute;
+      inset: 0 0 20px 28px;
+      width: calc(100% - 28px);
+      height: calc(100% - 20px);
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+    .hero-visual::before {
+      position: absolute;
+      z-index: 1;
+      inset: 14px -14px -4px 44px;
+      border: 2px solid rgba(40,184,197,.42);
+      border-radius: 28px;
+      content: "";
+    }
+    .hero-badge {
+      position: absolute;
+      z-index: 2;
+      right: -8px;
+      bottom: 0;
+      width: 205px;
+      padding: 18px;
+      color: var(--white);
+      background: var(--navy);
+      border: 5px solid var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+    .hero-badge strong {
+      display: block;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.8rem;
+      line-height: 1.1;
+    }
+    .hero-badge span { color: #D7EAF4; font-size: .78rem; }
+
+    /* Trust strip */
+    .trust-strip { padding: 25px 0; background: var(--white); border-bottom: 1px solid var(--line); }
+    .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+    .trust-item { display: flex; align-items: center; justify-content: center; gap: 13px; }
+    .trust-item > span:first-child {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      background: var(--ice);
+      border-radius: 12px;
+    }
+    .trust-item strong { display: block; color: var(--navy); font-size: .95rem; }
+    .trust-item small { display: block; color: var(--muted); font-size: .77rem; }
+
+    /* Services */
+    .services { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .service-card {
+      min-height: 235px;
+      padding: 25px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #B7D9E9;
+      box-shadow: var(--shadow);
+    }
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      color: var(--blue);
+      background: var(--ice);
+      border-radius: 14px;
+    }
+    .service-icon svg { width: 27px; height: 27px; }
+    .service-card h3 { margin-bottom: 9px; color: var(--navy); }
+    .service-card p { min-height: 51px; font-size: .88rem; }
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 17px;
+      color: var(--blue);
+      font-size: .84rem;
+      font-weight: 800;
+    }
+    .text-link:hover { color: var(--navy); }
+
+    /* Pricing */
+    .pricing { background: var(--cloud); }
+    .pricing-intro {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 25px;
+      margin-bottom: 35px;
+    }
+    .pricing-intro .section-heading { margin: 0; }
+    .price-layout { display: grid; grid-template-columns: 1fr .78fr; gap: 22px; align-items: start; }
+    .price-panel {
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(7,63,105,.045);
+    }
+    .price-panel-head {
+      padding: 22px 25px;
+      color: var(--white);
+      background: var(--navy);
+    }
+    .price-panel-head h3 { font-size: 1.15rem; }
+    .price-panel-head p { margin-top: 5px; color: #D4E8F3; font-size: .82rem; }
+    .price-table { width: 100%; border-collapse: collapse; }
+    .price-table th, .price-table td {
+      padding: 13px 22px;
+      text-align: left;
+      border-bottom: 1px solid #EAF0F3;
+      font-size: .9rem;
+    }
+    .price-table th { color: #718391; background: #FAFCFD; font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; }
+    .price-table td:last-child, .price-table th:last-child { text-align: right; }
+    .price-table td:last-child { color: var(--navy); font-weight: 800; }
+    .price-table tr:last-child td { border-bottom: 0; }
+    .price-side { display: grid; gap: 16px; }
+    .price-mini {
+      padding: 22px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 15px;
+    }
+    .price-mini h3 { margin-bottom: 14px; color: var(--navy); }
+    .price-mini-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 9px 0;
+      border-bottom: 1px solid #EAF0F3;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    .price-mini-row:last-child { border: 0; }
+    .price-mini-row strong { color: var(--navy); white-space: nowrap; }
+    .price-note {
+      padding: 16px 18px;
+      color: #526A79;
+      background: var(--ice);
+      border-radius: 12px;
+      font-size: .8rem;
+    }
+    .price-cta { margin-top: 24px; }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 58px;
+    }
+    .about-image-wrap { position: relative; min-height: 440px; }
+    .about-image {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+    .about-caption {
+      position: absolute;
+      right: -18px;
+      bottom: 22px;
+      max-width: 220px;
+      padding: 18px;
+      color: var(--white);
+      background: var(--blue);
+      border: 5px solid var(--white);
+      border-radius: 15px;
+    }
+    .about-caption strong { display: block; font-family: "Manrope", sans-serif; font-size: 1.45rem; }
+    .about-caption span { color: #E4F5FF; font-size: .78rem; }
+    .about-copy h2 { margin: 14px 0 18px; color: var(--navy); }
+    .about-copy > p { margin-bottom: 17px; }
+    .benefit-list { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin: 25px 0 29px; }
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #40596A;
+      font-size: .87rem;
+      font-weight: 700;
+    }
+    .benefit svg { width: 19px; height: 19px; color: var(--teal); }
+
+    /* Process */
+    .process { background: var(--ice); }
+    .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .process-card {
+      padding: 26px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(191,212,224,.75);
+      border-radius: var(--radius);
+    }
+    .process-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 19px;
+      color: var(--white);
+      background: var(--blue);
+      border-radius: 50%;
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+    }
+    .process-card h3 { margin-bottom: 9px; color: var(--navy); }
+    .process-card p { font-size: .88rem; }
+
+    /* Coverage */
+    .coverage { padding: 70px 0; background: var(--navy); }
+    .coverage-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+    .coverage h2 { max-width: 590px; margin: 12px 0; color: var(--white); }
+    .coverage p { max-width: 590px; color: #D0E2EC; }
+    .coverage .eyebrow { color: #7EDBE0; }
+    .coverage .btn { flex-shrink: 0; }
+
+    /* FAQ */
+    .faq-wrap { max-width: 850px; margin-inline: auto; }
+    .faq-wrap .section-heading { text-align: center; margin-inline: auto; }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-item summary {
+      position: relative;
+      padding: 21px 42px 21px 0;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      position: absolute;
+      top: 18px;
+      right: 4px;
+      color: var(--blue);
+      content: "+";
+      font-family: "Inter", sans-serif;
+      font-size: 1.5rem;
+    }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item p { padding: 0 35px 20px 0; font-size: .9rem; }
+
+    /* CTA and footer */
+    .final-cta { padding: 0 0 90px; }
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 44px;
+      color: var(--white);
+      background: linear-gradient(115deg, var(--blue), var(--navy));
+      border-radius: 24px;
+    }
+    .cta-box::after {
+      position: absolute;
+      top: -150px;
+      right: 20%;
+      width: 360px;
+      height: 360px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50%;
+      content: "";
+    }
+    .cta-copy { position: relative; z-index: 1; max-width: 620px; }
+    .cta-copy h2 { margin-bottom: 12px; }
+    .cta-copy p { color: #D9EDF8; }
+    .cta-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 10px; }
+    .site-footer { padding: 65px 0 25px; color: #D4E4ED; background: #102F45; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr .8fr .9fr; gap: 45px; padding-bottom: 45px; }
+    .footer-brand { color: var(--white); }
+    .footer-about p { max-width: 340px; margin-top: 17px; color: #B8CDD9; font-size: .87rem; }
+    .footer-col h3 { margin-bottom: 17px; color: var(--white); font-size: 1rem; }
+    .footer-links { display: grid; gap: 10px; color: #B8CDD9; font-size: .85rem; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 22px;
+      color: #A9C1CF;
+      border-top: 1px solid rgba(255,255,255,.14);
+      font-size: .78rem;
+    }
+
+    /* Mobile sticky actions */
+    .mobile-sticky {
+      position: fixed;
+      z-index: 80;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: none;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(255,255,255,.97);
+      border-top: 1px solid var(--line);
+      box-shadow: 0 -8px 24px rgba(7,63,105,.10);
+      backdrop-filter: blur(12px);
+    }
+    .mobile-sticky .btn { min-height: 48px; padding: 10px; font-size: .86rem; }
+    .btn-whatsapp { color: var(--white); background: #159B68; }
+    .btn-whatsapp:hover { background: #0F8056; }
+
+    @media (max-width: 980px) {
+      .nav-links { gap: 16px; }
+      .nav-actions .btn { padding-inline: 14px; }
+      .hero-grid { gap: 32px; }
+      .hero-visual { min-height: 390px; }
+      .price-layout { grid-template-columns: 1fr; }
+      .price-side { grid-template-columns: 1fr 1fr; }
+      .about-grid { gap: 35px; }
+    }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 32px, var(--max)); }
+      .section { padding: 70px 0; }
+      .topbar-inner { justify-content: center; }
+      .topbar-contact { justify-content: center; gap: 12px; }
+      .topbar-note { display: none; }
+      .nav-wrap { min-height: 68px; }
+      .nav-actions { margin-left: auto; }
+      .nav-actions .btn { display: none; }
+      .menu-toggle { display: grid; place-items: center; }
+      .nav-links {
+        position: absolute;
+        top: 68px;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 20px 18px;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 14px 20px rgba(7,63,105,.08);
+      }
+      .nav-links.open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 4px; border-bottom: 1px solid #EDF2F5; }
+      .hero { padding: 55px 0 62px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+      .hero-copy { max-width: 100%; }
+      .hero-copy > p { font-size: 1rem; }
+      .hero-visual { min-height: 330px; margin-right: 8px; }
+      .hero-photo { inset: 0 0 12px 12px; width: calc(100% - 12px); height: calc(100% - 12px); }
+      .hero-visual::before { inset: 10px -8px -2px 24px; }
+      .hero-badge { right: -5px; width: 170px; padding: 13px; }
+      .hero-badge strong { font-size: 1.5rem; }
+      .trust-grid { grid-template-columns: 1fr; gap: 15px; }
+      .trust-item { justify-content: flex-start; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .service-card { min-height: 225px; padding: 19px; }
+      .service-card p { min-height: 70px; }
+      .pricing-intro { display: block; }
+      .pricing-intro > .btn { margin-top: 20px; }
+      .price-side { grid-template-columns: 1fr; }
+      .price-table th, .price-table td { padding: 12px 15px; }
+      .about-grid { grid-template-columns: 1fr; gap: 35px; }
+      .about-image-wrap { min-height: 330px; margin-right: 10px; }
+      .about-image { height: 330px; }
+      .about-caption { right: -10px; bottom: 12px; }
+      .benefit-list { grid-template-columns: 1fr 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .coverage-inner { align-items: flex-start; flex-direction: column; }
+      .cta-box { align-items: flex-start; flex-direction: column; padding: 30px 24px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-about { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
+      .mobile-sticky { display: grid; }
+      body { padding-bottom: 72px; }
+    }
+    @media (max-width: 430px) {
+      .hero-actions { display: grid; grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .service-card { padding: 16px; }
+      .service-card h3 { font-size: 1.05rem; }
+      .service-card p { font-size: .81rem; }
+      .service-icon { width: 46px; height: 46px; margin-bottom: 15px; }
+      .benefit-list { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-about { grid-column: auto; }
+      .price-table th, .price-table td { font-size: .82rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "Smart Cool",
+    "url": "https://smartcool.sg/",
+    "telephone": "+6598888832",
+    "email": "smartcool@outlook.sg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "190 Woodlands Industrial Park E5",
+      "addressLocality": "Singapore",
+      "postalCode": "757516",
+      "addressCountry": "SG"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Singapore"
+    },
+    "serviceType": [
+      "Aircon servicing",
+      "Aircon chemical cleaning",
+      "Aircon chemical overhaul",
+      "Aircon repair",
+      "Aircon installation"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-note">Air-conditioning services across Singapore</span>
+      <div class="topbar-contact">
+        <a href="tel:+6598888832">Call: +65 9888 8832</a>
+        <a href="mailto:smartcool@outlook.sg">smartcool@outlook.sg</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Smart Cool homepage">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M12 2v20M4 6l16 12M20 6L4 18M8 3l4 3 4-3M8 21l4-3 4 3M3 10l1 5 4 1M21 10l-1 5-4 1"/>
+          </svg>
+        </span>
+        <span>smart cool</span>
+      </a>
+
+      <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="https://smartcool.sg/appointment">Book an Appointment</a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Your aircon care specialists</span>
+          <h1>Feel the difference of a <span>cooler, cleaner</span> home.</h1>
+          <p>From routine aircon servicing to chemical cleaning, repairs and installation, Smart Cool helps keep your indoor environment comfortable.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://smartcool.sg/appointment">
+              Book an Appointment
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-outline" href="https://api.whatsapp.com/send?phone=6598888832" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.1A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.5 2.2 2.1 3.8 4.3 4.6l1.2-1.1 2 .9c-.2 1.2-1 1.8-2.2 1.8-3.4-.1-6.8-3.5-6.9-6.9 0-1.2.6-2 1.8-2.2l.9 2-1.1.9Z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+          <div class="hero-note">
+            <svg class="icon" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>
+            Clear service options. Convenient booking. Practical aircon care.
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img class="hero-photo"
+            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=85"
+            alt="Air-conditioning technician carrying out maintenance work"
+            fetchpriority="high">
+          <div class="hero-badge">
+            <strong>10+ Years</strong>
+            <span>Industry experience, as stated by Smart Cool</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Smart Cool highlights">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <span><svg class="icon" viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3.4 8.3 8 10 4.6-1.7 8-5 8-10V6l-8-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span>
+          <div><strong>Experienced team</strong><small>Over 10 years in the industry*</small></div>
+        </div>
+        <div class="trust-item">
+          <span><svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM20 8v6M23 11h-6"/></svg></span>
+          <div><strong>3,000+ homeowners</strong><small>Customer figure stated by the company*</small></div>
+        </div>
+        <div class="trust-item">
+          <span><svg class="icon" viewBox="0 0 24 24"><path d="M12 2v20M4 6l16 12M20 6 4 18"/></svg></span>
+          <div><strong>Multiple service options</strong><small>From servicing to installation</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">What we do</span>
+          <h2>Aircon services for every stage of care.</h2>
+          <p>Choose the service that suits your system. If you are unsure what your aircon needs, contact the team for guidance before booking.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v9H4zM7 18h10M9 14v4M15 14v4M8 9h8"/></svg>
+            </div>
+            <h3>General Servicing</h3>
+            <p>Routine cleaning and maintenance to help keep your air-conditioning system in good working condition.</p>
+            <a class="text-link" href="#pricing">View pricing <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 3c2.8 3.5 5 6.2 5 9a5 5 0 0 1-10 0c0-2.8 2.2-5.5 5-9Z"/><path d="M9 13a3 3 0 0 0 3 3"/></svg>
+            </div>
+            <h3>Chemical Cleaning</h3>
+            <p>A deeper cleaning option for selected aircon components when routine servicing is not enough.</p>
+            <a class="text-link" href="#pricing">View pricing <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/><path d="m15 16 2 2 4-5"/></svg>
+            </div>
+            <h3>Chemical Overhaul</h3>
+            <p>A more intensive cleaning service for systems that require a thorough internal clean.</p>
+            <a class="text-link" href="#pricing">View pricing <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 3v18M5 7l14 10M19 7 5 17M8 3l4 3 4-3M8 21l4-3 4 3"/></svg>
+            </div>
+            <h3>Aircon Gas Top-Up</h3>
+            <p>Refrigerant checks and top-up options, subject to diagnosis and the system's requirements.</p>
+            <a class="text-link" href="https://smartcool.sg/appointment">Enquire now <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 20h16M6 20V8l6-4 6 4v12M9 11h6M9 15h6"/><path d="M12 4v4"/></svg>
+            </div>
+            <h3>Condenser Cleaning</h3>
+            <p>Cleaning options for condenser units to help remove accumulated dirt and debris.</p>
+            <a class="text-link" href="https://smartcool.sg/appointment">Enquire now <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M14 6 8 12l4 4 6-6M5 19l4-4M15 3l6 6M4 20l3-1 1-3-3-1-2 2 1 3Z"/></svg>
+            </div>
+            <h3>Repair & Installation</h3>
+            <p>Aircon troubleshooting, repair and installation support for residential and commercial spaces.</p>
+            <a class="text-link" href="https://smartcool.sg/appointment">Enquire now <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="pricing-intro">
+          <div class="section-heading">
+            <span class="eyebrow">Service pricing</span>
+            <h2>Know the starting prices before you book.</h2>
+            <p>Explore the published price examples below. Final charges and service suitability should be confirmed with Smart Cool.</p>
+          </div>
+          <a class="btn btn-primary" href="https://smartcool.sg/appointment">Request an Appointment</a>
+        </div>
+
+        <div class="price-layout">
+          <div class="price-panel">
+            <div class="price-panel-head">
+              <h3>One-Time Normal Servicing</h3>
+              <p>Published rates by number of indoor units</p>
+            </div>
+            <table class="price-table">
+              <thead><tr><th>Number of units</th><th>Published price</th></tr></thead>
+              <tbody>
+                <tr><td>1 unit</td><td>S$40</td></tr>
+                <tr><td>2 units</td><td>S$55</td></tr>
+                <tr><td>3 units</td><td>S$70</td></tr>
+                <tr><td>4 units</td><td>S$85</td></tr>
+                <tr><td>5 units</td><td>S$100</td></tr>
+                <tr><td>6 units</td><td>S$115</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="price-side">
+            <div class="price-mini">
+              <h3>Chemical Cleaning</h3>
+              <div class="price-mini-row"><span>1 unit</span><strong>S$85</strong></div>
+              <div class="price-mini-row"><span>2 units</span><strong>S$160</strong></div>
+              <div class="price-mini-row"><span>3 units</span><strong>S$230</strong></div>
+              <div class="price-mini-row"><span>4 units</span><strong>S$290</strong></div>
+              <div class="price-mini-row"><span>5 units</span><strong>S$360</strong></div>
+              <div class="price-mini-row"><span>6 units</span><strong>S$390</strong></div>
+            </div>
+            <div class="price-mini">
+              <h3>Chemical Overhaul</h3>
+              <div class="price-mini-row"><span>1 unit</span><strong>S$150</strong></div>
+              <div class="price-mini-row"><span>2 units</span><strong>S$280</strong></div>
+              <div class="price-mini-row"><span>3 units</span><strong>S$390</strong></div>
+              <div class="price-mini-row"><span>4 units</span><strong>S$480</strong></div>
+              <div class="price-mini-row"><span>5 units</span><strong>S$550</strong></div>
+              <div class="price-mini-row"><span>6 units</span><strong>S$600</strong></div>
+            </div>
+            <div class="price-note">
+              Some chemical service rates may depend on unit capacity (BTU) and service conditions. Please confirm the applicable rate, inclusions and any additional charges before confirming a booking.
+            </div>
+          </div>
+        </div>
+
+        <div class="price-cta">
+          <a class="btn btn-outline" href="https://smartcool.sg/appointment">Ask about your aircon service</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-image-wrap">
+          <img class="about-image"
+            src="https://images.unsplash.com/photo-1581092918056-0c4c3 Thank?auto=format&fit=crop&w=1100&q=85"
+            alt="Technician working with tools during an air-conditioning service"
+            loading="lazy">
+          <div class="about-caption">
+            <strong>3,000+</strong>
+            <span>Homeowners served, as stated by Smart Cool</span>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <span class="eyebrow">About Smart Cool</span>
+          <h2>Practical aircon care, with service options that make sense.</h2>
+          <p>Smart Cool provides air-conditioning services for customers in Singapore, from regular maintenance to deeper cleaning, troubleshooting and installation.</p>
+          <p>The company's website highlights more than a decade of industry experience and service to over 3,000 homeowners. The redesign brings these messages forward while making service choices and booking information easier to navigate.</p>
+
+          <div class="benefit-list">
+            <div class="benefit"><svg class="icon" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>Multiple service options</div>
+            <div class="benefit"><svg class="icon" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>Residential service focus</div>
+            <div class="benefit"><svg class="icon" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>Published price guidance</div>
+            <div class="benefit"><svg class="icon" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>Convenient appointment form</div>
+          </div>
+
+          <a class="btn btn-primary" href="https://smartcool.sg/appointment">Arrange a Service</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Simple booking journey</span>
+          <h2>Getting your aircon serviced can be straightforward.</h2>
+          <p>A clear three-step path helps visitors understand what to do next, from choosing a service to arranging a visit.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="process-number">01</div>
+            <h3>Choose your service</h3>
+            <p>Review the service options and identify the type of assistance your air-conditioning system needs.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-number">02</div>
+            <h3>Send your enquiry</h3>
+            <p>Use the appointment form or WhatsApp to share your requirements and preferred arrangements.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-number">03</div>
+            <h3>Confirm your booking</h3>
+            <p>Speak with the team to confirm service suitability, appointment details and applicable charges.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="coverage">
+      <div class="container coverage-inner">
+        <div>
+          <span class="eyebrow">Serving Singapore</span>
+          <h2>Aircon support for homes and businesses across Singapore.</h2>
+          <p>Smart Cool's website presents service coverage across Singapore, including areas such as Woodlands, Punggol, Sengkang and Ang Mo Kio. Contact the team to confirm availability for your location.</p>
+        </div>
+        <a class="btn btn-light" href="https://api.whatsapp.com/send?phone=6598888832" target="_blank" rel="noopener">Check Service Availability</a>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container faq-wrap">
+        <div class="section-heading">
+          <span class="eyebrow">FAQs</span>
+          <h2>Questions before you book?</h2>
+          <p>Some quick guidance to help you choose the right next step.</p>
+        </div>
+
+        <details class="faq-item">
+          <summary>What types of aircon services does Smart Cool provide?</summary>
+          <p>Its listed services include normal aircon servicing, chemical cleaning, chemical overhaul, gas top-up, condenser cleaning, troubleshooting, repair and installation. Confirm the exact scope when enquiring.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How much does normal aircon servicing cost?</summary>
+          <p>The published one-time normal servicing prices shown on this page range from S$40 for one unit to S$115 for six units. Confirm current rates and what is included directly with Smart Cool.</p>
+        </details>
+        <details class="faq-item">
+          <summary>When should I consider chemical cleaning or an overhaul?</summary>
+          <p>These are deeper cleaning options that may be suitable in some circumstances. The appropriate service depends on the condition and type of your air-conditioning system. Ask the technician to assess your unit before proceeding.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I arrange an appointment?</summary>
+          <p>You can use the company's online appointment form or contact the team by phone or WhatsApp to discuss your service needs and preferred timing.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does Smart Cool serve my area?</summary>
+          <p>The company presents its service coverage as Singapore-wide. Contact Smart Cool with your location to confirm appointment availability.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final-cta" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-copy">
+            <h2>Ready to arrange your aircon service?</h2>
+            <p>Tell Smart Cool what your system needs and take the next step towards a more comfortable indoor space.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-light" href="https://smartcool.sg/appointment">Book an Appointment</a>
+            <a class="btn btn-outline" style="color:#fff;background:transparent;border-color:rgba(255,255,255,.55)" href="tel:+6598888832">Call Smart Cool</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand footer-brand" href="#home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M12 2v20M4 6l16 12M20 6 4 18M8 3l4 3 4-3M8 21l4-3 4 3"/>
+              </svg>
+            </span>
+            <span>smart cool</span>
+          </a>
+          <p>Air-conditioning servicing, cleaning, repair and installation services for residential and commercial customers in Singapore.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <div class="footer-links">
+            <a href="#services">Our Services</a>
+            <a href="#pricing">Service Pricing</a>
+            <a href="#about">About Smart Cool</a>
+            <a href="#faq">FAQs</a>
+            <a href="https://smartcool.sg/appointment">Book an Appointment</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <div class="footer-links">
+            <a href="tel:+6598888832">+65 9888 8832</a>
+            <a href="mailto:smartcool@outlook.sg">smartcool@outlook.sg</a>
+            <a href="https://api.whatsapp.com/send?phone=6598888832" target="_blank" rel="noopener">WhatsApp Smart Cool</a>
+            <span>190 Woodlands Industrial Park E5,<br>Singapore 757516</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Smart Cool. All rights reserved.</span>
+        <span>Air-conditioning services in Singapore.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-sticky" aria-label="Quick contact actions">
+    <a class="btn btn-primary" href="tel:+6598888832">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.4 2.8a2 2 0 0 1-.6 1.7L7.6 9.5a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 1.7-.6l2.8.4a2 2 0 0 1 1.6 1.9Z"/></svg>
+      Call
+    </a>
+    <a class="btn btn-whatsapp" href="https://api.whatsapp.com/send?phone=6598888832" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.1A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.5 2.2 2.1 3.8 4.3 4.6l1.2-1.1 2 .9c-.2 1.2-1 1.8-2.2 1.8-3.4-.1-6.8-3.5-6.9-6.9 0-1.2.6-2 1.8-2.2l.9 2-1.1.9Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const primaryNav = document.getElementById("primary-nav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = primaryNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    });
+
+    primaryNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        primaryNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
